@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+body {
+  background-image: linear-gradient(115deg, rgba(181, 115, 171, 0.703), rgba(49, 93, 78, 0.79));
+  margin: 0 auto;
+}
+
+form {
+  background-color: rgba(33, 41, 56, 0.568);
+  max-width: 60%;
+  max-height: 100%;
+  padding: 25px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 40px;
+  box-shadow: 2px 2px 10px rgba(61, 61, 61, 0.671);
+}
+#title {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 2px 2px 8px rgba(94, 93, 93, 0.404);
+}
+#description {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.902);
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: lighter;
+  text-shadow: 2px 2px 8px rgba(94, 93, 93, 0.404);
+}
+#number, #name, #email{
+  padding: 8px;
+  width: 90%;
+  font-family: sans-serif;
+}
+#name-label, #email-label, #number-label {
+  color: white;
+}
+#dropdown, #dropdowns {
+  width: 92.7%;
+  padding: 8px ;
+
+}
+.inputs, .inputs2, .inputs3 {
+display: flex;
+align-items: center;
+font-size: 1.125rem;
+margin-bottom: -0.8rem;
+padding-top: 0px;
+color: rgba(246, 245, 245, 0.872);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 15px;
+}
+label {
+display: flex;
+align-items: center;
+font-size: 1.125rem;
+margin-bottom: 0.3rem;
+padding-top: 0px;
+}
+.inputs3 {
+  margin-bottom: 15px;
+}
+#name-label, #number-label, #email-label {
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+
+#name, #email, #number {
+    margin-bottom: 15px;
+
+  }
+  #name:hover, #email:hover, #number:hover {
+    box-shadow: 2px 1px 10px rgba(47, 48, 47, 0.557);
+  }
+  #dropdowns {
+    margin-bottom: 22px;
+  }
+ div >.main {
+  padding-top: 12px;
+  
+  }
+  .input-checkbox-main {
+    margin-top: 0px;
+  }
+  label {
+  color: rgba(246, 245, 245, 0.872);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  }
+  #submit {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 7px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border: none;
+    background-color: rgb(78, 152, 119);
+    color: white;
+    font-family: monospace;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+  #submit:hover {
+    box-shadow: 2px 1px 10px rgba(47, 48, 47, 0.313);
+  }
+  input::placeholder {
+    font-family: monospace;
+  }
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+.option {
+  font-size: 14px;
+  font-weight: lighter;
+  padding-left: 4px;
+  color: rgba(236, 235, 235, 0.822);
+  font-family: sans-serif;
+
+}
+.cute {
+  margin: 6px;
+  font-size: 14px;
+  font-weight: lighter;
+  padding-bottom: 25px;
+  color: rgba(236, 235, 235, 0.822);
+  font-family: sans-serif;
+
+}
+textarea:hover {
+  box-shadow: 2px 1px 10px rgba(47, 48, 47, 0.557);
+
+}
+textarea {
+  max-width: 100%;
+}
+
+
+  </style>
+</head>
+<body>
+  <h1 id="title">Test Survey Form</h1>
+  <p id="description">Thank you for taking the time to help us improve the platform </p>
+  <form id="survey-form" action="">
+  <div class="form-group">
+    <label id="name-label" for="name">Nome </label><br>
+  <input type="text" name="" id="name" placeholder="Digite seu nome"required>
+</div>
+
+<div class="form-group">
+  <label id="email-label" for="email">Email </label><br>
+<input type="email" name="" id="email" placeholder="Digite seu email" required>
+</div>
+
+<div class="form-group">
+  <label id="number-label" for="age">Idade <span class="option"> (opcional)</span> </label><br>
+<input type="number" min="10" max="99" name="" id="number" placeholder="Idade" required>
+</div>
+
+<div class="form-group">
+  <p>Qual opção melhor descreve sua situação profissional?</p>
+ <select name="" id="dropdown">
+
+ <option disabled="" select="" value="">Selecione uma das opções</option>
+
+ <option value="estudante">Estudante</option>
+
+ <option value="integral">Integral</option>
+
+ <option value="parcial">Parcial</option>
+
+ <option value="prefiro">Prefiro não dizer</option>
+
+ <option value="outro">Outro</option>
+
+</select>
+</div>
+
+<div class="form-group">
+  <p>Você recomendaria nosso site para um amigo?</p>
+  <label class="inputs">
+    <input value="def" class="input-radio" type="radio" name="user-recommend" id="def" checked="" >Definitivamente
+  </label><br>
+
+  <label  class="inputs2"> 
+    <input value="talvez" class="input-radio" type="radio" id="talvez" name="user-recommend">Talvez
+  </label><br>
+
+  <label  class="inputs3">
+    <input value="not-sure" class="input-radio" type="radio" id="not-sure" name="user-recommend">Não tenho certeza
+  </label>
+  <p>O que mais te chamou atenção em nosso site?</p>
+  <select name="" id="dropdowns">
+    <option disabled="" select="" value="">Selecione uma das opções</option>
+    <option value="desafios">Desafios</option>
+    <option value="projetos">Projetos</option>
+    <option value="comunidade">Comunidade</option>
+    <option value="open-src">Open Source</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <p>O que você gostaria de ver aqui no futuro? <span class="cute">(Marque todas que se aplicam)</span></p>
+  <label class="main">
+    <br><input value="front" class="input-checkbox-main" name="prefer" type="checkbox">Projetos Front-end
+  </label>
+
+  <label>
+    <br><input value="back" class="input-checkbox" name="prefer" type="checkbox">Projetos Back-end
+  </label>
+
+  <label>
+    <br><input value="desafios" class="input-checkbox" name="prefer" type="checkbox">Desafios
+  </label>
+  <label>
+    <br><input value="open" class="input-checkbox" name="prefer" type="checkbox">Comunidade Open Source
+  </label>
+
+  <label>
+    <br><input value="videos" class="input-checkbox" name="prefer" type="checkbox">Videos
+  </label>
+
+  <label>
+    <br><input value="wiki" class="input-checkbox" name="prefer" type="checkbox">Wiki
+  </label>
+
+  <label>
+    <br><input class="input-checkbox" name="prefer" type="checkbox">Forums
+  </label>
+
+  <label>
+    <br><input class="input-checkbox" name="prefer" type="checkbox">Cursos Adicionais
+  </label>
+  <div class="form-group">
+    <p>Algum comentário ou sugestão?</p>
+    <textarea class="input-textarea" name="" id="comments" cols="65" rows="6.5" placeholder="Digite o que vem em mente"></textarea>
+  </div>
+  <div class="form-group">
+    <button id="submit" type="submit">Enviar</button>
+  </div>
+
+
+
+
+
+</div>
+</form>
+
+
+
+  
+</body>
+</html>
